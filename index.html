@@ -1,0 +1,81 @@
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    height: 80vh;
+    width: auto;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    transition-duration: 1s;
+}
+
+.img-wrapper {
+  height: 100%;
+  width: auto;
+}
+
+.img-wrapper img {
+  height: 100%;
+  width: 100vw;
+}
+
+.shift {
+    transform: sc;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    height: 4px;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    border: 0.1px solid #fff;
+    background: #000;
+
+}
+</style>
+
+
+<div class="container" id="container">
+        <div class="img-wrapper">
+            <img src="https://i0.wp.com/androidcentral.us/wp-content/uploads/2014/06/low-poly-texture-19.png" />
+        </div>
+        <div class="img-wrapper">
+          <img src="https://www.desktopbackground.org/download/o/2013/02/12/529523_low-earth-orbit-wallpapers-pics-about-space_2560x1600_h.jpg" />
+        </div>
+        <div class="img-wrapper">
+          <img src="https://www.desktopbackground.org/download/o/2013/02/19/532971_some-simple-low-poly-wallpapers-album-on-imgur_1920x1080_h.png" />
+        </div>
+        <div class="img-wrapper">
+          <img src="https://www.desktopbackground.org/download/o/2014/09/23/829217_download-low-poly-deadpool-hd-wallpapers-for-1366-x-768_1366x768_h.jpg" />
+        </div>
+</div>
+
+<section>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, laborum! Sint deserunt magni provident voluptates doloribus labore eum eaque aliquid at suscipit ratione quae cum impedit, natus recusandae! Unde neque molestias enim optio obcaecati nulla quod, magni temporibus accusantium officia ipsam. Praesentium odit cupiditate blanditiis fugiat tenetur nam sequi porro laboriosam aspernatur, itaque laudantium consequuntur recusandae quo repudiandae! Impedit fuga ea officiis reprehenderit veritatis quis tempore aspernatur nobis explicabo suscipit adipisci, consectetur facere! Aperiam provident debitis reiciendis enim consequatur adipisci, fugiat itaque molestiae error dolor esse tempore architecto exercitationem in ipsum nobis, animi, pariatur dolorem officia a odio possimus similique. Consectetur, nemo tempore? Eveniet animi hic dolores pariatur aut a alias ipsum? Maiores, quaerat eveniet praesentium quos ea unde? Dicta eius molestias, placeat labore laudantium eveniet alias odio consequatur soluta veniam, quidem, ipsa fugiat incidunt pariatur suscipit aspernatur optio commodi. Repudiandae facilis similique molestiae praesentium nobis magni quam dolore odio obcaecati, alias laudantium eum quas minus quae ut nisi minima doloremque sint consectetur qui harum aperiam totam. Quas voluptatibus eaque odio consequatur sint numquam, voluptate iusto tempora officia? Nihil ducimus molestias temporibus, similique ratione incidunt minima dolor architecto. Maxime, possimus cumque. Saepe ducimus dicta sed. Eum, omnis! Modi accusamus facere consectetur amet libero ad tempore doloribus commodi quae iste eaque alias optio, deleniti unde labore sapiente eos. Repudiandae mollitia possimus est culpa pariatur consequuntur quae quibusdam. Accusantium fuga quae quibusdam aperiam vel ullam in quidem, sed, deleniti odio cupiditate suscipit quaerat possimus accusamus! At odit harum laudantium aperiam quis blanditiis itaque quasi labore molestiae beatae laborum quos enim placeat nulla, ad saepe accusantium quod non modi neque quo inventore. Eius similique voluptatem autem voluptatibus modi? Voluptate, quod. Voluptates quas expedita suscipit ex temporibus mollitia dolores velit dicta culpa sit, amet odit! Rem doloremque praesentium officia cum neque, explicabo provident asperiores, id numquam modi magni nihil corrupti beatae placeat! Quaerat doloremque officia magni quam voluptatum quidem, mollitia soluta animi provident adipisci laborum nulla, dolore, possimus ut nam. Eaque delectus consequatur tenetur non labore, eos iure exercitationem possimus perspiciatis incidunt sed inventore placeat id veritatis fugiat, qui sapiente eius iusto, quia necessitatibus animi totam rem accusamus odit! Vero cupiditate exercitationem nobis beatae dignissimos rerum repellat accusantium rem voluptatem, possimus tempora optio, praesentium veniam aspernatur minima amet sapiente porro commodi nesciunt harum aliquam eum non omnis? Quis libero totam harum sunt, ipsa vitae adipisci saepe quos ipsam, consequatur cum iure aliquid nostrum labore.
+</section>
+
+<section><video data-html5-video="" poster="https://v6.viduplayer.com/i/01/00048/3o67obi6bvh9.jpg" preload="auto" src="blob:https://viduplayer.com/f97abe6f-0698-413d-9932-65474587f995" __idm_id__="655193089"><style class="clappr-style">[data-html5-video]{position:absolute;height:100%;width:100%;display:block}</style></video></section>
+
+<script>
+    const container = document.getElementById("container");
+
+    const shift = () => {
+        if(container.scrollLeft + container.scrollWidth/4 >= container.scrollWidth) {
+            container.scrollLeft = 0;
+        }else {
+            container.scrollLeft += container.scrollWidth/4;
+        }
+    }
+
+    document.addEventListener("click", () => {
+        shift();
+    });
+
+</script>
